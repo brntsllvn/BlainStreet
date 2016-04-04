@@ -118,7 +118,7 @@
         for (i = 0; i < ThingHeightInStairs ; i++) { 
             total += "|";
         }        
-        document.getElementById(element_id+"Count").innerHTML = ThingHeightInStairs;
+        document.getElementById(element_id+"Count").innerHTML = Math.ceil(ThingHeightInStairs);
         document.getElementById(element_id).innerHTML = total + "---" + tall_thing_height_in_feet + " feet";
       }
       CalculateHeightInStairs("Blaine", 180) 
