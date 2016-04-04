@@ -64,25 +64,25 @@
                 <td></td>
                 <td></td>
                 <td>Blaine Street Stairs</td>
-                <td>|---180 feet</td>
+                <td id="Blaine">|---180 feet</td>
               </tr>
               <tr>
                 <td></td>
                 <td></td>
                 <td>Space Needle</td>
-                <td>||||---605 feet</td>
+                <td id="Needle">||||---605 feet</td>
               </tr>
               <tr>
                 <td></td>
                 <td></td>
                 <td>Little Si</td>
-                <td>|||||-||||---1,575 feet</td>
+                <td is="LittleSi">|||||-||||---1,575 feet</td>
               </tr>
               <tr>
                 <td></td>
                 <td></td>
                 <td>Mt. Si</td>
-                <td>|||||-|||||-|||||-|||||-|||--4,176 feet</td>
+                <td id="Si">|||||-|||||-|||||-|||||-|||--4,176 feet</td>
               </tr>
               <tr>
                 <td></td>
@@ -118,13 +118,29 @@
     </script>
     
     <script>
-      var RanierHeightInFeet = 14461;
       var BlaineStreetStairsHeightInFeet = 180;
+
+      var NeedleHeightInFeet = 605;
+      var total = "";
+      for (i = 0; i < NeedleHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+          total += "|";
+      }
+      document.getElementById("Needle").innerHTML = total + "---605 feet";
+      
+      var SiHeightInFeet = 4176;
+      var total = "";
+      for (i = 0; i < SiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+          total += "|";
+      }
+      document.getElementById("Si").innerHTML = total + "---4,176 feet";
+
+      var RanierHeightInFeet = 14461;
       var total = "";
       for (i = 0; i < RanierHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
           total += "|";
       }
-      document.getElementById("Ranier").innerHTML = total; 
+      document.getElementById("Ranier").innerHTML = total + "---14,461 feet";
+      
     </script>
     
     <script>
