@@ -60,8 +60,8 @@
               </tr>
               <tr>
                 <td>Blaine Street Stairs</td>
-                <td>1</td>
-                <td id="Blaine">|---180 feet</td>
+                <td id="BlaineCount"></td>
+                <td id="Blaine"></td>
               </tr>
               <tr>
                 <td>Space Needle</td>
@@ -117,10 +117,12 @@
         var total = "";
         for (i = 0; i < ThingHeightInStairs ; i++) { 
             total += "|";
-        }
+        }        
+        document.getElementById(element_id+"Count").innerHTML = ThingHeightInStairs;
         document.getElementById(element_id).innerHTML = total + "---" + tall_thing_height_in_feet + " feet";
       }
-      
+      CalculateHeightInStairs("Blaine", 180) 
+      CalculateHeightInStairs("Needle", 605)      
       CalculateHeightInStairs("Needle", 605)
       CalculateHeightInStairs("LittleSi", 1575)
       CalculateHeightInStairs("Si", 4176)
