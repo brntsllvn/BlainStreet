@@ -31,19 +31,19 @@
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Brent S</td>
                 <td id="BrentSOut"></td>
-                <td id="BrentSIn">|||||-|||||-|||||-|||||</td>
+                <td id="BrentSIn">||||||||||||||||||||</td>
               </tr>
               <tr>
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Eric M</td>
                 <td id="EricMOUT"></td>
-                <td id="EricMIn">|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||</td>
+                <td id="EricMIn">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</td>
               </tr>
               <tr>
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Paul R</td>
                 <td id="PaulROut"></td>
-                <td id="PaulRIn">|||||-||||</td>
+                <td id="PaulRIn">||||||||||||||||||||||||||||||||||||||||</td>
               </tr>
               <tr>
                 <td></td>
@@ -101,6 +101,10 @@
     <script>
       var BrentSHeight = document.getElementById("BrentSIn").innerHTML.length;
       document.getElementById("BrentSOut").innerHTML = BrentSHeight;
+      var EricMHeight = document.getElementById("EricMIn").innerHTML.length;
+      document.getElementById("EricMOut").innerHTML = EricMHeight;
+      var PaulRHeight = document.getElementById("PaulRIn").innerHTML.length;
+      document.getElementById("PaulROut").innerHTML = PaulRHeight;
     </script>
   </body>
 </html>
