@@ -27,7 +27,7 @@
                 <th>How High?</th>
                 <th></th>
               </tr>
-              <tr>
+              <tr id='BrentSHeight'>
                 <td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
@@ -36,7 +36,7 @@
                 <td id="BrentSOut"></td>
                 <td id="BrentSIn">||||||||||||||||||||</td>
               </tr>
-              <tr>
+              <tr id='EricMHeight'>
                 <td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
@@ -45,7 +45,7 @@
                 <td id="EricMOut"></td>
                 <td id="EricMIn">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</td>
               </tr>
-              <tr>
+              <tr id='PaulRHeight'>
                 <td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
@@ -88,7 +88,7 @@
                 <td></td>
                 <td></td>
                 <td>Mt. Ranier</td>
-                <td>|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||---14,416 feet</td>
+                <td id='Ranier'></td>
               </tr>
               <tr>
                 <td></td>
@@ -107,6 +107,7 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    
     <script>
       var BrentSHeight = document.getElementById("BrentSIn").innerHTML.length;
       document.getElementById("BrentSOut").innerHTML = BrentSHeight;
@@ -117,14 +118,23 @@
     </script>
     
     <script>
-      function addOne() {
-        document.getElementById("BrentSIn").innerHTML += "|";
+      var RanierHeightInFeet = 14461;
+      var BlaineStreetStairsHeightInFeet = 180;
+      var total = "";
+      for (i = 0; i < RanierHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+          total += "|";
       }
-      function minusOne() {
-        document.getElementById("BrentSIn").innerHTML = document.getElementById("BrentSIn").innerHTML.slice(0, - 1);
-      }
+      document.getElementById("Ranier").innerHTML = total; 
     </script>
     
-    
+    <script>
+      //function addOne() {
+      //  document.getElementById("BrentSIn").innerHTML += "|";
+      //}
+      //function minusOne() {
+      //  document.getElementById("BrentSIn").innerHTML = document.getElementById("BrentSIn").innerHTML.slice(0, - 1);
+      //}
+    </script>
+  
   </body>
 </html>
