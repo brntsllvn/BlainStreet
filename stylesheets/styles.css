@@ -139,7 +139,7 @@ pre {
 }
 
 table {
-  table-layout: auto;
+  table-layout: fixed;
   width:80%;
   border-collapse:collapse;
   
@@ -151,7 +151,7 @@ table td.chart-column {
 
 th, td {
   text-align:left;
-  padding:5px 10px;
+  padding:5px 5px;
   border-bottom:1px solid #e5e5e5;
 }
 
@@ -166,10 +166,6 @@ th {
 
 img {
   max-width:100%;
-}
-
-header {
-
 }
 
 header ul {
