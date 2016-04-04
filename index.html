@@ -28,19 +28,28 @@
                 <th></th>
               </tr>
               <tr>
-                <td><button type="button">+1</button><button type="button">-1</button></td>
+                <td>
+                  <button type="button" onclick="addOne()">+1</button>
+                  <button type="button" onclick="minusOne()">-1</button>
+                </td>
                 <td>Brent S</td>
                 <td id="BrentSOut"></td>
                 <td id="BrentSIn">||||||||||||||||||||</td>
               </tr>
               <tr>
-                <td><button type="button">+1</button><button type="button">-1</button></td>
+                <td>
+                  <button type="button" onclick="addOne()">+1</button>
+                  <button type="button" onclick="minusOne()">-1</button>
+                </td>
                 <td>Eric M</td>
                 <td id="EricMOut"></td>
                 <td id="EricMIn">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</td>
               </tr>
               <tr>
-                <td><button type="button">+1</button><button type="button">-1</button></td>
+                <td>
+                  <button type="button" onclick="addOne()">+1</button>
+                  <button type="button" onclick="minusOne()">-1</button>
+                </td>
                 <td>Paul R</td>
                 <td id="PaulROut"></td>
                 <td id="PaulRIn">||||||||||||||||||||||||||||||||||||||||</td>
@@ -106,5 +115,17 @@
       var PaulRHeight = document.getElementById("PaulRIn").innerHTML.length;
       document.getElementById("PaulROut").innerHTML = PaulRHeight;
     </script>
+    
+    <script>
+      function addOne() {
+        document.getElementById("BrentSOut").innerHTML += "|";
+      }
+
+      function minusOne() {
+        document.getElementById("BrentSOut").innerHTML = document.getElementById("BrentSOut").innerHTML.slice(0, - 1);
+      }
+    </script>
+    
+    
   </body>
 </html>
