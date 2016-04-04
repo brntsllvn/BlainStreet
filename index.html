@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width">
 
     <script>
-      alert("Welcome to BSSC");
+      var BrentSHeight = document.getElementById("BrentSIn").innerHTML.length;
+      document.getElementById("BrentSOut").innerHTML = BrentSHeight;
     </script>
   </head>
   <body>
@@ -34,20 +35,20 @@
               <tr>
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Brent S</td>
-                <td id="BrentS"></td>
-                <td>|||||-|||||-|||||-|||||</td>
+                <td id="BrentSOut"></td>
+                <td id="BrentSIn">|||||-|||||-|||||-|||||</td>
               </tr>
               <tr>
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Eric M</td>
-                <td id="EricM"></td>
-                <td>|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||</td>
+                <td id="EricMOUT"></td>
+                <td id="EricMIn">|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||</td>
               </tr>
               <tr>
                 <td><button type="button">+1</button><button type="button">-1</button></td>
                 <td>Paul R</td>
-                <td id="PaulR"></td>
-                <td>|||||-||||</td>
+                <td id="PaulROut"></td>
+                <td id="PaulRIn">|||||-||||</td>
               </tr>
               <tr>
                 <td></td>
