@@ -110,14 +110,6 @@
     </script>
     
     <script>
-      var BlaineStreetStairsHeightInFeet = 180;
-
-
-      var total = "";
-      for (i = 0; i < HeightInStairs ; i++) { 
-          total += "|";
-      }
-      
       function CalculateHeightInStairs(element_id, tall_thing_height_in_feet) {
         var BlaineStreetStairsHeightInFeet = 180;
         var ThingHeightInFeet = tall_thing_height_in_feet;
@@ -126,7 +118,7 @@
         for (i = 0; i < ThingHeightInStairs ; i++) { 
             total += "|";
         }
-        document.getElementById(&quot+element_id+&quot).innerHTML = total + "---" + tall_thing_height_in_feet " feet";
+        document.getElementById(element_id).innerHTML = total + "---" + tall_thing_height_in_feet " feet";
       }
       
       CalculateHeightInStairs("Needle", 605)
