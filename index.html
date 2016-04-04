@@ -22,34 +22,33 @@
             
             <table>
               <tr>
-                <th></th>
                 <th>Who?</th>
                 <th>How High?</th>
                 <th></th>
               </tr>
               <tr id='BrentSHeight'>
-                <td>
+                <!--<td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
-                </td>
+                </td>-->
                 <td>Brent S</td>
                 <td id="BrentSOut"></td>
                 <td id="BrentSIn">||||||||||||||||||||</td>
               </tr>
               <tr id='EricMHeight'>
-                <td>
+                <!--<td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
-                </td>
+                </td>-->
                 <td>Eric M</td>
                 <td id="EricMOut"></td>
                 <td id="EricMIn">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</td>
               </tr>
               <tr id='PaulRHeight'>
-                <td>
+                <!--<td>
                   <button type="button" onclick="addOne()">+1</button>
                   <button type="button" onclick="minusOne()">-1</button>
-                </td>
+                </td>-->
                 <td>Paul R</td>
                 <td id="PaulROut"></td>
                 <td id="PaulRIn">||||||||||||||||||||||||||||||||||||||||</td>
@@ -58,43 +57,36 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
               </tr>
               <tr>
-                <td></td>
                 <td></td>
                 <td>Blaine Street Stairs</td>
                 <td id="Blaine">|---180 feet</td>
               </tr>
               <tr>
                 <td></td>
-                <td></td>
                 <td>Space Needle</td>
-                <td id="Needle">||||---605 feet</td>
+                <td id="Needle"></td>
               </tr>
               <tr>
-                <td></td>
                 <td></td>
                 <td>Little Si</td>
-                <td is="LittleSi">|||||-||||---1,575 feet</td>
+                <td is="LittleSi"></td>
               </tr>
               <tr>
-                <td></td>
                 <td></td>
                 <td>Mt. Si</td>
-                <td id="Si">|||||-|||||-|||||-|||||-|||--4,176 feet</td>
+                <td id="Si"></td>
               </tr>
               <tr>
-                <td></td>
                 <td></td>
                 <td>Mt. Ranier</td>
-                <td id='Ranier'></td>
+                <td id="Ranier"></td>
               </tr>
               <tr>
                 <td></td>
-                <td></td>
                 <td>International Space Station</td>
-                <td>|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-|||||-...-|||||---1,300,000 feet</td>
+                <td id="ISS"></td>
               </tr>
             </table>
             
@@ -127,6 +119,13 @@
       }
       document.getElementById("Needle").innerHTML = total + "---605 feet";
       
+      var LittleSiHeightInFeet = 1575;
+      var total = "";
+      for (i = 0; i < LittleSiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+          total += "|";
+      }
+      document.getElementById("LittleSi").innerHTML = total + "---1,575 feet";
+      
       var SiHeightInFeet = 4176;
       var total = "";
       for (i = 0; i < SiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
@@ -140,7 +139,13 @@
           total += "|";
       }
       document.getElementById("Ranier").innerHTML = total + "---14,461 feet";
-      
+
+      var ISSHeightInFeet = 1310000;
+      var total = "";
+      for (i = 0; i < ISSHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+          total += "|";
+      }
+      document.getElementById("ISS").innerHTML = total + "---1,310,000 feet";      
     </script>
     
     <script>
