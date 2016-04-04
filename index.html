@@ -65,27 +65,27 @@
               </tr>
               <tr>
                 <td>Space Needle</td>
-                <td></td>
+                <td id="NeedleCount"></td>
                 <td id="Needle"></td>
               </tr>
               <tr>
                 <td>Little Si</td>
-                <td></td>
-                <td is="LittleSi"></td>
+                <td id="LittleSiCount"></td>
+                <td id="LittleSi"></td>
               </tr>
               <tr>
                 <td>Mt. Si</td>
-                <td></td>
+                <td id="SiCount"></td>
                 <td id="Si"></td>
               </tr>
               <tr>
                 <td>Mt. Ranier</td>
-                <td></td>
+                <td id="RanierCount"></td>
                 <td id="Ranier"></td>
               </tr>
               <tr>
                 <td>International Space Station</td>
-                <td></td>
+                <td id="ISSCount"></td>
                 <td id="ISS"></td>
               </tr>
             </table>
@@ -113,13 +113,17 @@
       var BlaineStreetStairsHeightInFeet = 180;
 
       var NeedleHeightInFeet = 605;
+      var HeightInStairs =  NeedleHeightInFeet / BlaineStreetStairsHeightInFeet;
+      document.getElementById("NeedleCount").innerHTML = HeightInStairs;
       var total = "";
-      for (i = 0; i < NeedleHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+      for (i = 0; i < HeightInStairs ; i++) { 
           total += "|";
       }
       document.getElementById("Needle").innerHTML = total + "---605 feet";
       
       var LittleSiHeightInFeet = 1575;
+      HeightInStairs =  LittleSiHeightInFeet / BlaineStreetStairsHeightInFeet;
+      document.getElementById("LittleSiCount").innerHTML = HeightInStairs;
       var total = "";
       for (i = 0; i < LittleSiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
           total += "|";
@@ -127,8 +131,9 @@
       document.getElementById("LittleSi").innerHTML = total + "---1,575 feet";
       
       var SiHeightInFeet = 4176;
+      HeightInStairs =  SiHeightInFeet / BlaineStreetStairsHeightInFeet;     
       var total = "";
-      for (i = 0; i < SiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
+      for (i = 0; i < HeightInStairs ; i++) { 
           total += "|";
       }
       document.getElementById("Si").innerHTML = total + "---4,176 feet";
