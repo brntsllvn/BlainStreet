@@ -112,45 +112,28 @@
     <script>
       var BlaineStreetStairsHeightInFeet = 180;
 
-      var NeedleHeightInFeet = 605;
-      var HeightInStairs =  NeedleHeightInFeet / BlaineStreetStairsHeightInFeet;
-      document.getElementById("NeedleCount").innerHTML = HeightInStairs;
+
       var total = "";
       for (i = 0; i < HeightInStairs ; i++) { 
           total += "|";
       }
-      document.getElementById("Needle").innerHTML = total + "---605 feet";
       
-      var LittleSiHeightInFeet = 1575;
-      HeightInStairs =  LittleSiHeightInFeet / BlaineStreetStairsHeightInFeet;
-      document.getElementById("LittleSiCount").innerHTML = HeightInStairs;
-      var total = "";
-      for (i = 0; i < LittleSiHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
-          total += "|";
+      function CalculateHeightInStairs(element_id, tall_thing_height_in_feet) {
+        var BlaineStreetStairsHeightInFeet = 180;
+        var ThingHeightInFeet = tall_thing_height_in_feet;
+        var ThingHeightInStairs = tall_thing_height_in_feet / BlaineStreetStairsHeightInFeet;
+        var total = "";
+        for (i = 0; i < ThingHeightInStairs ; i++) { 
+            total += "|";
+        }
+        document.getElementById(&quot+element_id+&quot).innerHTML = total + "---" + tall_thing_height_in_feet " feet";
       }
-      document.getElementById("LittleSi").innerHTML = total + "---1,575 feet";
       
-      var SiHeightInFeet = 4176;
-      HeightInStairs =  SiHeightInFeet / BlaineStreetStairsHeightInFeet;     
-      var total = "";
-      for (i = 0; i < HeightInStairs ; i++) { 
-          total += "|";
-      }
-      document.getElementById("Si").innerHTML = total + "---4,176 feet";
-
-      var RanierHeightInFeet = 14461;
-      var total = "";
-      for (i = 0; i < RanierHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
-          total += "|";
-      }
-      document.getElementById("Ranier").innerHTML = total + "---14,461 feet";
-
-      var ISSHeightInFeet = 1310000;
-      var total = "";
-      for (i = 0; i < ISSHeightInFeet / BlaineStreetStairsHeightInFeet ; i++) { 
-          total += "|";
-      }
-      document.getElementById("ISS").innerHTML = total + "---1,310,000 feet";      
+      CalculateHeightInStairs("Needle", 605)
+      CalculateHeightInStairs("LittleSi", 1575)
+      CalculateHeightInStairs("Si", 4176)
+      CalculateHeightInStairs("Ranier", 14461)
+      CalculateHeightInStairs("ISS", 1310000)
     </script>
     
     <script>
