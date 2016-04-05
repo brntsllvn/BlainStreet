@@ -117,7 +117,7 @@
         var HeightString = document.getElementById(Input).innerHTML;
         var HeightInBars = HeightString.split("|").length - 1;
         var HeightStringBars = "|".repeat(HeightInBars);
-        var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
+        var HeightInFeet = HeightInBars * BlaineStreetStairsHeightInFeet;
         document.getElementById(Input).innerHTML  = HeightStringBars + "&#8602" + HeightInFeet + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
       }
