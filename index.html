@@ -116,12 +116,19 @@
     <script src="javascripts/scale.fix.js"></script>
     
     <script>
-      var BrentSHeight = document.getElementById("BrentSIn").innerHTML.length;
-      document.getElementById("BrentSOut").innerHTML = BrentSHeight;
-      var EricMHeight = document.getElementById("EricMIn").innerHTML.length;
-      document.getElementById("EricMOut").innerHTML = EricMHeight;
-      var PaulRHeight = document.getElementById("PaulRIn").innerHTML.length;
-      document.getElementById("PaulROut").innerHTML = PaulRHeight;
+    function CalculateHowHigh (person) {
+      var Input = person+"In";
+      var Output = person+"Out";
+      var Height = document.getElementById(Input).innerHTML.length;
+      document.getElementById(Output).innerHTML = Height;
+    }
+    CalculateHowHigh(BrentS)
+    CalculateHowHigh(EricM)    
+    CalculateHowHigh(PaulR)   
+    CalculateHowHigh(Ace)
+    CalculateHowHigh(ErickaT) 
+    CalculateHowHigh(DaveS)
+    CalculateHowHigh(TimP)       
     </script>
     
     <script>
