@@ -111,10 +111,12 @@
     
     <script>
       function CalculateHowHigh (person) {
+        var BlaineStreetStairsHeightInFeet = 180;
         var Input = person+"In";
         var Output = person+"Out";
         var Height = document.getElementById(Input).innerHTML.length;
-        document.getElementById(Output).innerHTML = Height;
+        var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
+        document.getElementById(Output).innerHTML = Height + "---" + HeightInFeet + " feet";
       }
       CalculateHowHigh("BrentS")
       CalculateHowHigh("EricM")    
