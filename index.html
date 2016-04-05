@@ -115,9 +115,10 @@
         var Input = person+"In";
         var Output = person+"Out";
         var HeightString = document.getElementById(Input).innerHTML;
+        var HeightStringBars = HeightString.split("|");
         var Height = HeightString.split("|").length - 1;
         var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
-        document.getElementById(Input).innerHTML += "<--" + HeightInFeet + " feet"
+        document.getElementById(Input).innerHTML  = HeightStringBars + "<--" + HeightInFeet + " feet"
         document.getElementById(Output).innerHTML = Height;
       }
       CalculateHowHigh("BrentS")
