@@ -118,7 +118,7 @@
         var HeightInBars = HeightString.split("|").length - 1;
         var HeightStringBars = "|".repeat(Height);
         var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
-        document.getElementById(Input).innerHTML  = HeightStringBars + &#8678; + HeightInFeet + " feet";
+        document.getElementById(Input).innerHTML  = HeightStringBars + "&#8602" + HeightInFeet + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
       }
       CalculateHowHigh("BrentS")
@@ -140,7 +140,7 @@
             total += "|";
         }        
         document.getElementById(element_id+"Count").innerHTML = Math.ceil(ThingHeightInStairs);
-        document.getElementById(element_id).innerHTML = total + &#8678; + tall_thing_height_in_feet + " feet";
+        document.getElementById(element_id).innerHTML = total + "&#8602" + tall_thing_height_in_feet + " feet";
       }
       CalculateHeightInStairs("Blaine", 180) 
       CalculateHeightInStairs("Needle", 605)      
