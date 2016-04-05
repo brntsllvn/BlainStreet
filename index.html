@@ -38,10 +38,10 @@
                 <td id="BrentSOut"></td>
                 <td id="BrentSIn"></td>
               </tr>
-              <tr id='AceHeight'>
+              <tr id='AceTYDHeight'>
                 <td nowrap>Ace</td>
-                <td id="AceOut"></td>
-                <td id="AceIn">||</td>
+                <td id="AceTYDOut"></td>
+                <td id="AceTYDIn">||</td>
               </tr>
               <tr id='EricMHeight'>
                 <td nowrap>Eric M</td>
@@ -116,19 +116,19 @@
     <script src="javascripts/scale.fix.js"></script>
     
     <script>
-    function CalculateHowHigh (person) {
-      var Input = person+"In";
-      var Output = person+"Out";
-      var Height = document.getElementById(Input).innerHTML.length;
-      document.getElementById(Output).innerHTML = Height;
-    }
-    CalculateHowHigh(BrentS)
-    CalculateHowHigh(EricM)    
-    CalculateHowHigh(PaulR)   
-    CalculateHowHigh(Ace)
-    CalculateHowHigh(ErickaT) 
-    CalculateHowHigh(DaveS)
-    CalculateHowHigh(TimP)       
+      function CalculateHowHigh (person) {
+        var Input = person+"In";
+        var Output = person+"Out";
+        var Height = document.getElementById(Input).innerHTML.length;
+        document.getElementById(Output).innerHTML = Height;
+      }
+      CalculateHowHigh("BrentS")
+      CalculateHowHigh("EricM")    
+      CalculateHowHigh("PaulR")   
+      CalculateHowHigh("AceTYD")
+      CalculateHowHigh("ErickaT") 
+      CalculateHowHigh("DaveS")
+      CalculateHowHigh("TimP")       
     </script>
     
     <script>
