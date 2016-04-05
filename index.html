@@ -117,7 +117,8 @@
         var HeightString = document.getElementById(Input).innerHTML;
         var Height = HeightString.split("|").length - 1;
         var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
-        document.getElementById(Output).innerHTML = Height + "<--" + HeightInFeet + " feet";
+        document.getElementById(Input).innerHTML += "<--" + HeightInFeet + " feet"
+        document.getElementById(Output).innerHTML = Height;
       }
       CalculateHowHigh("BrentS")
       CalculateHowHigh("EricM")    
