@@ -116,7 +116,7 @@
         var Output = person+"Out";
         var HeightString = document.getElementById(Input).innerHTML;
         var HeightInBars = HeightString.split("|").length - 1;
-        var HeightStringBars = "|".repeat(Height);
+        var HeightStringBars = "|".repeat(HeightInBars);
         var HeightInFeet = Height * BlaineStreetStairsHeightInFeet;
         document.getElementById(Input).innerHTML  = HeightStringBars + "&#8602" + HeightInFeet + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
