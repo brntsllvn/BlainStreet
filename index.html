@@ -31,13 +31,7 @@
               <tr id='BrentSHeight'>
                 <td nowrap>Brent S</td>
                 <td id="BrentSOut"></td>
-                <td id="BrentSIn">
-                  |||||||||||||||||||||||||||||||||||
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>
-                </td>
+                <td id="BrentSIn">|||||||||||||||||||||||||||||||||||</td>
                 <td id="BrentSBeer"></td>
               </tr>
               <tr id='BetsyWHeight'>
@@ -135,7 +129,11 @@
         var HeightInBars = HeightString.split("|").length - 1;
         var HeightStringBars = "|".repeat(HeightInBars);
         var HeightInFeet = HeightInBars * BlaineStreetStairsHeightInFeet;
-        document.getElementById(Input).innerHTML  = HeightStringBars + "<br>" + HeightInFeet.toString() + " feet";
+        document.getElementById(Input).innerHTML  = HeightStringBars + "<br>
+                  <img src="beer.png" width=10 height=10></img>
+                  <img src="beer.png" width=10 height=10></img>
+                  <img src="beer.png" width=10 height=10></img>
+                  <img src="beer.png" width=10 height=10></img>" + HeightInFeet.toString() + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
       }
       CalculateHowHigh("BrentS")
