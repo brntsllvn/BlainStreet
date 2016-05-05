@@ -32,7 +32,6 @@
                 <td nowrap>Brent S</td>
                 <td id="BrentSOut"></td>
                 <td id="BrentSIn">|||||||||||||||||||||||||||||||||||</td>
-                <td id="BrentSBeer"></td>
               </tr>
               <tr id='BetsyWHeight'>
                 <td nowrap>Betsy W</td>
@@ -130,7 +129,7 @@
         var HeightStringBars = "|".repeat(HeightInBars);
         var HeightInFeet = HeightInBars * BlaineStreetStairsHeightInFeet;
         document.getElementById(Input).innerHTML  = HeightStringBars + 
-             "<br><img src="beer.png" width=10 height=10></img><br>" + 
+             "<br>" + 
              HeightInFeet.toString() + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
       }
