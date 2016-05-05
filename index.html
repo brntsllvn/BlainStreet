@@ -129,11 +129,9 @@
         var HeightInBars = HeightString.split("|").length - 1;
         var HeightStringBars = "|".repeat(HeightInBars);
         var HeightInFeet = HeightInBars * BlaineStreetStairsHeightInFeet;
-        document.getElementById(Input).innerHTML  = HeightStringBars + "<br>
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>
-                  <img src="beer.png" width=10 height=10></img>" + HeightInFeet.toString() + " feet";
+        document.getElementById(Input).innerHTML  = HeightStringBars + 
+             "<br><img src="beer.png" width=10 height=10></img><br>" + 
+             HeightInFeet.toString() + " feet";
         document.getElementById(Output).innerHTML = HeightInBars;
       }
       CalculateHowHigh("BrentS")
